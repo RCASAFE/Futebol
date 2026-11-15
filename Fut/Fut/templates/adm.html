@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/atualizar-placar" method="post">
+    <input type="number" name="id_usuario" placeholder="ID do jogador" required>
+    <input type="number" name="gols" placeholder="Número de gols" required>
+    <input type="number" name="assistencias" placeholder="Número de assistências" required>
+    <input type="number" name="jogos" placeholder="Número de jogos" value="1" min="1" required>
+    <input type="number" name="id_deletar" placeholder="Deletar um usuario">
+
+    <button type="submit">Atualizar estatísticas</button>
+    </form>
+    {% if mensagem %}
+    <p>{{ mensagem }}</p>
+    {% endif %}
+</body>
+</html>

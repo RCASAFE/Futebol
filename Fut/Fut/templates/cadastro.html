@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form action="/cadastro" method="post">
+        <input type="text" name="nome" placeholder="Digite o seu nome de usuario.">
+        <input type="password" name="senha" placeholder="Digite a sua senha de usuario">
+        <button type="submit">Cadastre aqui</button>
+        <a href="{{  url_for('login')  }}">Já tem conta? Logue aqui</a>
+    </form>
+</body>
+</html>

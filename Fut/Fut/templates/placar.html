@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Placar</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>Jogador</th>
+            <th>Gols</th>
+            <th>Assistências</th>
+            <th>Jogos</th>
+            <th>Média</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for jogador in placares %}
+        <tr>
+            <td>{{ jogador[0] }}</td>
+            <td>{{ jogador[1] }}</td>
+            <td>{{ jogador[2] }}</td>
+            <td>{{ jogador[3] }}</td>
+            <td>
+                {{ "%.2f"|format(jogador[4]) if jogador[4] is not none else "-" }}
+            </td>
+        </tr>
+
+        {% else %}
+        <tr>
+            <td colspan="5">Nenhum jogador cadastrado.</td>
+        </tr>
+   
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
